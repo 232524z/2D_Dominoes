@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 class L:
     table = None
 
@@ -70,3 +71,7 @@ class L:
             return options
         if index +1 > height:
             return self.find_options(width,height,((width+height-1)-index))
+
+    def to_dataframe(self):
+        df = pd.DataFrame(self.table)
+        return df

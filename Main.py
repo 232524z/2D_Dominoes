@@ -1,6 +1,7 @@
 import numpy as np
+import pandas as pd
 from L_Dominoes import L
-table_size = 10
+table_size = 40
 test = L(table_size, table_size)
 
 
@@ -17,4 +18,4 @@ for i in range(3,table_size+1):
         l_value = test.mex(options)
         test.set_value(i, j, l_value)
 
-print(test)
+test.to_dataframe().to_csv("L.csv")
