@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from L_Dominoes import L
 
-table_size = 500
+table_size = 250
 L_table = L(table_size)
 
 # Base cases for 1x and 2x Ls
@@ -18,5 +18,6 @@ for i in range(3, table_size + 1):
             options += L_table.find_options(i, j, k)
         L_value = L.mex(options)
         L_table.set_value(i, j, L_value)
+    print(i)
 
-L_table.to_dataframe().to_csv("L.csv")
+L_table.to_dataframe().to_csv("L.csv", index=False, header=False)
