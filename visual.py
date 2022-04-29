@@ -4,7 +4,7 @@ from IPython.display import display
 
 
 def table_to_image(size, table_name, save_name):
-    table = pd.read_csv(table_name).to_numpy()
+    table = pd.read_csv(table_name, header=None).to_numpy()
     img = Image.new('RGB', (size, size), "black")
     pixels = img.load()
 
