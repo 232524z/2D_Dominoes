@@ -26,23 +26,7 @@ class L:
     # Sums two nimbers using an XOR on each digit of binary
     @staticmethod
     def nim_sum(nim1, nim2):
-        nim1, nim2 = bin(nim1)[2:], bin(nim2)[2:]
-        sum = 0
-        length = max(len(nim1), len(nim2))
-        for i in range(1, length + 1):
-            try:
-                digit1 = int(nim1[-i])
-            except:
-                digit1 = 0
-
-            try:
-                digit2 = int(nim2[-i])
-            except:
-                digit2 = 0
-
-            if digit1 != digit2:
-                sum += 2 ** (i - 1)
-        return sum
+        return nim1 ^ nim2
 
     def get_table(self):
         return self.table
@@ -71,9 +55,9 @@ class L:
             options = [up, right, out]
 
         if index + 1 > height:
-            dominoes_to_the_left = index-height+1
-            dominoes_to_the_right = width-dominoes_to_the_left-1
-            left = self.nim_sum(height-1, dominoes_to_the_right)
+            dominoes_to_the_left = index - height + 1
+            dominoes_to_the_right = width - dominoes_to_the_left - 1
+            left = self.nim_sum(height - 1, dominoes_to_the_right)
             right = self.get_value(height, dominoes_to_the_left)
             out = self.nim_sum(right, dominoes_to_the_right)
             options = [left, right, out]
