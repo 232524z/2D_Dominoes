@@ -10,7 +10,7 @@ def table_to_image(size, table_name, save_name):
 
     max_value = 2 * size - 1
     normalizer = 1 / max_value
-    for i in range(size - 1):
+    for i in range(size):
         for j in range(size):
             normalized_table_value = table[i][j] * normalizer
             pixel_value = int(255 * (1 - normalized_table_value))

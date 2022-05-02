@@ -4,7 +4,6 @@ from L_Dominoes import L
 
 table_size = 250
 L_table = L(table_size)
-
 # Base cases for 1x and 2x Ls
 for i in range(1, table_size + 1):
     L_table.set_value(1, i, i)
@@ -19,5 +18,4 @@ for i in range(3, table_size + 1):
         L_value = L.mex(options)
         L_table.set_value(i, j, L_value)
     print(i)
-
 L_table.to_dataframe().to_csv("L.csv", index=False, header=False)
