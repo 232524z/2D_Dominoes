@@ -18,4 +18,5 @@ def table_to_image(size, table_name, save_name):
     img.save(save_name, format="png")
 
 
-table_to_image(250, "L.csv", "visual.png")
+# table_to_image(100, "L.csv", "visual.png")
+table_to_image(250, "Nim.csv", "Nim.png")
