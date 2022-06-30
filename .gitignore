@@ -1,0 +1,9 @@
+.DS_Store
+*.csv
+*.png
+*.xml
+*.idea
+*.iml
+conjecture_checker.py
+data.json
+rust_visual.py
