@@ -28,3 +28,4 @@ The second image represents nim values using color to add more contrast. Lower n
 * Dan Xiao
 * Max Zhang
 * Praj Chirathivat
+* Ethan Chapman
